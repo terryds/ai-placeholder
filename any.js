@@ -3,7 +3,7 @@ import config from "./config.js";
 import openai from "./openaiApi.js";
 import { fixJSONFormat } from "./helper.js";
 
-router.get('/(.*)', async (context) => {
+router.get('/(.+)', async (context) => {
 
   const promptMessages = [
     {"role": "system", "content": "You are a backend function that receives a user input of url and then returns a fake content data in valid JSON object format. Make sure the content of the data resembles real content, so there wouldn't be any dummy text such as lorem ipsum or other similar stuff. If there is an image url, please replace it with a picsum.photos image placeholder url. You always return in JSON format. You do not return any other text besides the JSON format, even a note beside that."},
@@ -29,7 +29,7 @@ router.get('/(.*)', async (context) => {
       console.log(`INVALID JSON: ${completion.data.choices[0].message.content.trim()}. TRYING TO FIX...`)
       const fixed_json = fixJSONFormat(completion.data.choices[0].message.content.trim());
       console.log(`FIXED JSON: ${fixed_json}`)
-      context.response.body = parsed_json;
+      context.response.body = fixed_json;
     }
     else {
       console.error(e);

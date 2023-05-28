@@ -1,4 +1,5 @@
 import openai from "./openaiApi.js";
+import config from "./config.js";
 
 export async function fixJSONFormat(input) {
     const fixingMessagePrompt =

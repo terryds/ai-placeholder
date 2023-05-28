@@ -1,5 +1,6 @@
 import { Application } from "oak";
 import "./fake.js";
+import "./homepage.js";
 import "./any.js";
 import router from "./router.js"
 
