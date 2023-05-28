@@ -1,0 +1,7 @@
+{
+    "imports": {
+        "oak": "https://deno.land/x/oak@v12.5.0/mod.ts",
+        "openai": "https://esm.sh/openai@3.2.1",
+        "dotenv": "https://deno.land/std@0.177.1/dotenv/mod.ts"
+    }
+}
