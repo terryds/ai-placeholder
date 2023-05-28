@@ -17,14 +17,14 @@ For complete docs, please visit https://smartplaceholder.terrydjony.com
 <details>
 <summary>Examples</summary>
 
-## List of forum users
-### Request
+### List of forum users
+#### Request
 ```js
 fetch('https://aiplaceholder.terrydjony.com/forum/users')
     .then(response => response.json())
     .then(json => console.log(json))
 ```
-### Response
+#### Response
 ```json
 {
 "users": [
@@ -52,14 +52,14 @@ fetch('https://aiplaceholder.terrydjony.com/forum/users')
 ]
 }
 ```
-## List of CRM sales deals with deal size more than 10K
-### Request
+### List of CRM sales deals with deal size more than 10K
+#### Request
 ```js
 fetch('https://aiplaceholder.terrydjony.com/crm/deals?amount_greater_than=10000&limit=3&project=marketing')
     .then(response => response.json())
     .then(json => console.log(json))
 ```
-### Response
+#### Response
 ```json
 {
     "deals": [
@@ -87,14 +87,14 @@ fetch('https://aiplaceholder.terrydjony.com/crm/deals?amount_greater_than=10000&
     ]
 }
 ```
-## List of products from marketplace sorted by price
-### Request
+### List of products from marketplace sorted by price
+#### Request
 ```js
 fetch('https://aiplaceholder.terrydjony.com/products?marketplace=amazon&price_greater_than=20&views_greater_than=1000&sort_by=price&sort_order=desc')
       .then(response => response.json())
       .then(json => console.log(json))
 ```
-### Response
+#### Response
 ```json
 {
     "products": [
@@ -129,7 +129,7 @@ fetch('https://aiplaceholder.terrydjony.com/products?marketplace=amazon&price_gr
 </details>
 
 
-### Generate data with rules specified
+## Generate data with rules specified
 
 If you want to get some specific data, you can use this route  
 `/fake/:content_type/:number_of_records?/:fields_separated_by_commas?`
@@ -149,15 +149,16 @@ Fill this if you want to specify what fields each record object has.
 
 <details>
 <summary>Example</summary>
-## Without query strings
-### Request
+
+### Without query strings
+#### Request
 ```js
 fetch('https://aiplaceholder.terrydjony.com/fake/tweets/3/id,datetime,username,full_name,tweet,num_likes')
       .then(response => response.json())
       .then(json => console.log(json))
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -190,14 +191,14 @@ fetch('https://aiplaceholder.terrydjony.com/fake/tweets/3/id,datetime,username,f
 }
 ```
 
-## With imaginary query strings
+### With imaginary query strings
 
-### Request
+#### Request
 fetch('https://aiplaceholder.terrydjony.com/fake/users/3/id,username,full_name?sort_by=username&sort_order=asc')
       .then(response => response.json())
       .then(json => console.log(json))
 
-### Response
+#### Response
 ```json
 {
     "users": [
@@ -224,7 +225,7 @@ fetch('https://aiplaceholder.terrydjony.com/fake/users/3/id,username,full_name?s
 </details>
 
 
-### Self-host
+## Self-host
 
 
 ```bash
