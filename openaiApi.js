@@ -7,7 +7,4 @@ const configuration = new Configuration({
   });
 const openaiApi = new OpenAIApi(configuration);
 
-console.log(env["OPENAI_API_KEY"])
-console.log(`Deno.env: ${Deno.env.get("OPENAI_API_KEY")}`)
-
 export default openaiApi;

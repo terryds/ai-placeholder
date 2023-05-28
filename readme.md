@@ -245,6 +245,7 @@ deno task dev
 ## Deployment
 
 We can use Deno Deploy for [deployment](https://deno.com/deploy/docs/how-to-deploy).
+Make sure you specify the correct environment variables.
 By the time of this writing (28/05/23), Deno Deploy doesn't support import maps from deno.jsonc directly, so you should build a [Github Action Workflow for this](https://github.com/denoland/deployctl/blob/main/action/README.md)
 
 ## Contributing
