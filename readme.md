@@ -225,7 +225,7 @@ fetch('https://aiplaceholder.terrydjony.com/fake/users/3/id,username,full_name?s
 </details>
 
 
-## Self-host
+## Installation
 
 
 ```bash
@@ -241,6 +241,10 @@ cp .env.example .env
 # start the server
 deno task dev
 ```
+
+## Deployment
+
+We can use Deno Deploy for [deployment](https://deno.com/deploy/docs/how-to-deploy).
 
 ## To Do
 
