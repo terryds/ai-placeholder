@@ -5,7 +5,7 @@ AI Placeholder is a free AI-Powered Fake or Dummy Data API for testing and proto
 We use OpenAI API to generate dummy content.
 You can directly use the hosted version, or self-host it yourself.
 
-For complete docs, please visit https://smartplaceholder.terrydjony.com
+For complete docs, please visit https://aiplaceholder.terrydjony.com
 
 ## Features
 - No registration
