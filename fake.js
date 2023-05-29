@@ -5,6 +5,8 @@ import { fixJSONFormat } from "./helper.js";
 
 router.get('/fake/:object_name/:number_of_records?/:property_name?', async (context) => {
 
+  console.log(`GOT REQUEST: ${context.request.url.pathname + context.request.url.search}`);
+
   const promptMessages = [
     {"role": "system", "content": "You are a backend function that receives a user input of dummy/:object_name/:number_of_records?/:property_name?. Then you will return a fake content data in valid JSON object format. Make sure the content of the data resembles real content, so there wouldn't be any dummy text such as lorem ipsum or other similar stuff. If there is an image url, please replace it with a picsum.photos image placeholder url (for instagram posts, use 320x320). You always return in JSON format. You do not return any other text besides the JSON format, even a note beside that."},
     {"role": "user", "content": "/fake/posts/3/id,title,body"},

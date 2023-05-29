@@ -76,3 +76,10 @@ router.get('/site.webmanifest', async (context) => {
         index: "index.html",
       });
 })
+
+router.get('/robots.txt', async (context) => {
+    await context.send({
+        root: `${Deno.cwd()}/homepage`,
+        index: "index.html",
+    });
+})
