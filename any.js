@@ -29,7 +29,7 @@ router.get('/(.+)', async (context) => {
   catch (e) {
     if (e.message.includes("is not valid JSON") || e.name == "SyntaxError") {
       console.log(`INVALID JSON: ${completion.data.choices[0].message.content.trim()}. TRYING TO FIX...`)
-      const fixed_json = fixJSONFormat(completion.data.choices[0].message.content.trim());
+      const fixed_json = await fixJSONFormat(completion.data.choices[0].message.content.trim());
       console.log(`FIXED JSON: ${fixed_json}`)
       context.response.body = fixed_json;
     }
