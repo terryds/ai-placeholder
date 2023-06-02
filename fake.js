@@ -26,7 +26,7 @@ router.get('/fake/:object_name/:number_of_records?/:property_name?', async (cont
     context.response.body = parsed_json;
   }
   catch (e) {
-    if (e.message.includes("is not valid JSON")) {
+    if (e.message.includes("is not valid JSON") || e.name == "SyntaxError") {
       console.log(`INVALID JSON: ${completion.data.choices[0].message.content.trim()}. TRYING TO FIX...`)
       const fixed_json = fixJSONFormat(completion.data.choices[0].message.content.trim());
       console.log(`FIXED JSON: ${fixed_json}`)
