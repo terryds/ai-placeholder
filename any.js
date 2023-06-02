@@ -20,7 +20,7 @@ router.get('/(.+)', async (context) => {
     temperature: config.temperature,
     max_tokens: config.max_tokens
   });
-  // console.log(completion)
+  console.log(completion);
     
   try {
     const parsed_json = JSON.parse(completion.data.choices[0].message.content.trim());
