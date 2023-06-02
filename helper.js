@@ -15,5 +15,5 @@ export async function fixJSONFormat(input) {
         max_tokens: config.max_tokens
     });
 
-    return completion; 
+    return JSON.parse(completion.data.choices[0].message.content.trim()); 
 }
