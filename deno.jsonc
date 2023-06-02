@@ -5,7 +5,8 @@
       "dotenv": "https://deno.land/std@0.177.1/dotenv/mod.ts"
     },
     "tasks": {
-      "dev": "deno run --allow-read --allow-env --allow-net --watch main.js"
+      "dev": "deno run --allow-read --allow-env --allow-net --watch main.js",
+      "test": "deno test --allow-read --allow-env --allow-net --watch main.test.js"
     }
   }
   
