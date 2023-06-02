@@ -15,5 +15,10 @@ export async function fixJSONFormat(input) {
         max_tokens: config.max_tokens
     });
 
-    return JSON.parse(completion.data.choices[0].message.content.trim()); 
+    const fixed_message_text = completion.data.choices[0].message.content.trim();
+    console.log(fixed_message_text);
+
+    const fixed_json = JSON.parse(fixed_json);
+
+    return fixed_json; 
 }
